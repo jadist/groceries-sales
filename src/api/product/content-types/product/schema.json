@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ProductSKU": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ProductDescription": {
+      "type": "richtext",
+      "default": "-",
+      "required": true
+    },
+    "ProductName": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    }
+  }
+}
