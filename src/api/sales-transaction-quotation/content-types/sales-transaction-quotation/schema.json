@@ -35,6 +35,11 @@
       "repeatable": true,
       "component": "details.quotation-details",
       "required": true
+    },
+    "user_as_sales": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }
