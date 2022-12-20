@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_master_products",
+  "info": {
+    "singularName": "sales-master-product",
+    "pluralName": "sales-master-products",
+    "displayName": "SalesMasterProduct"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SKU": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "default": "-",
+      "required": true
+    }
+  }
+}
