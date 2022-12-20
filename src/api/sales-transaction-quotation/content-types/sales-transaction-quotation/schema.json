@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_quotations",
+  "info": {
+    "singularName": "sales-transaction-quotation",
+    "pluralName": "sales-transaction-quotations",
+    "displayName": "SalesTransactionQuotation",
+    "description": "UniqueNo from Component will be used as QuotationNo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "QuotationInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.name-and-description",
+      "required": true
+    },
+    "DiscountInPercentage": {
+      "type": "decimal",
+      "required": true,
+      "default": 0,
+      "max": 100,
+      "min": 0
+    },
+    "UseIndividualDiscount": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "QuotationDetails": {
+      "type": "component",
+      "repeatable": true,
+      "component": "details.quotation-details",
+      "required": true
+    }
+  }
+}
