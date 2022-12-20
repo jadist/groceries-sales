@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_purchase_orders",
+  "info": {
+    "singularName": "sales-transaction-purchase-order",
+    "pluralName": "sales-transaction-purchase-orders",
+    "displayName": "SalesTransactionPurchaseOrder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PurchaseOrderInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.name-and-description",
+      "required": true
+    },
+    "user_as_customer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}
