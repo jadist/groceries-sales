@@ -5,18 +5,13 @@
     "singularName": "sales-master-product",
     "pluralName": "sales-master-products",
     "displayName": "SalesMasterProduct",
-    "description": ""
+    "description": "UniqueNo from the Component, will be used as SKU"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "SKU": {
-      "type": "string",
-      "required": true,
-      "unique": true
-    },
     "ProductInfo": {
       "type": "component",
       "repeatable": false,

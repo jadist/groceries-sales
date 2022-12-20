@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-12-20T16:16:48.775Z"
+    "x-generation-date": "2022-12-20T16:20:50.049Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -95,14 +95,10 @@
         "properties": {
           "data": {
             "required": [
-              "SKU",
               "ProductInfo"
             ],
             "type": "object",
             "properties": {
-              "SKU": {
-                "type": "string"
-              },
               "ProductInfo": {
                 "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               }
@@ -119,9 +115,6 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "SKU": {
-                "type": "string"
-              },
               "ProductInfo": {
                 "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               },
@@ -435,9 +428,6 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "SKU": {
-                "type": "string"
-              },
               "ProductInfo": {
                 "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               },
@@ -784,9 +774,6 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "SKU": {
-                "type": "string"
-              },
               "ProductInfo": {
                 "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               },
@@ -1100,9 +1087,6 @@
           "attributes": {
             "type": "object",
             "properties": {
-              "SKU": {
-                "type": "string"
-              },
               "ProductInfo": {
                 "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               },
