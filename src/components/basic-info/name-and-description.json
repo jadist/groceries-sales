@@ -16,7 +16,7 @@
       "default": "-",
       "required": true
     },
-    "No": {
+    "UniqueNo": {
       "type": "string",
       "required": true,
       "unique": true
