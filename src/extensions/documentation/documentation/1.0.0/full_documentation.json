@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-12-20T16:09:01.563Z"
+    "x-generation-date": "2022-12-20T16:10:22.888Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -96,19 +96,15 @@
           "data": {
             "required": [
               "SKU",
-              "Name",
-              "Description"
+              "ProductInfo"
             ],
             "type": "object",
             "properties": {
               "SKU": {
                 "type": "string"
               },
-              "Name": {
-                "type": "string"
-              },
-              "Description": {
-                "type": "string"
+              "ProductInfo": {
+                "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               }
             }
           }
@@ -126,11 +122,8 @@
               "SKU": {
                 "type": "string"
               },
-              "Name": {
-                "type": "string"
-              },
-              "Description": {
-                "type": "string"
+              "ProductInfo": {
+                "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               },
               "createdAt": {
                 "type": "string",
@@ -445,11 +438,8 @@
               "SKU": {
                 "type": "string"
               },
-              "Name": {
-                "type": "string"
-              },
-              "Description": {
-                "type": "string"
+              "ProductInfo": {
+                "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               },
               "createdAt": {
                 "type": "string",
@@ -797,11 +787,8 @@
               "SKU": {
                 "type": "string"
               },
-              "Name": {
-                "type": "string"
-              },
-              "Description": {
-                "type": "string"
+              "ProductInfo": {
+                "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               },
               "createdAt": {
                 "type": "string",
@@ -1116,11 +1103,8 @@
               "SKU": {
                 "type": "string"
               },
-              "Name": {
-                "type": "string"
-              },
-              "Description": {
-                "type": "string"
+              "ProductInfo": {
+                "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               },
               "createdAt": {
                 "type": "string",
@@ -1430,6 +1414,20 @@
           },
           "meta": {
             "type": "object"
+          }
+        }
+      },
+      "BasicInfoNameAndDescriptionComponent": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "Name": {
+            "type": "string"
+          },
+          "Description": {
+            "type": "string"
           }
         }
       },

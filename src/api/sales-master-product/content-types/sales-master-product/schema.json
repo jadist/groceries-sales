@@ -4,7 +4,8 @@
   "info": {
     "singularName": "sales-master-product",
     "pluralName": "sales-master-products",
-    "displayName": "SalesMasterProduct"
+    "displayName": "SalesMasterProduct",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,13 +17,10 @@
       "required": true,
       "unique": true
     },
-    "Name": {
-      "type": "string",
-      "required": true
-    },
-    "Description": {
-      "type": "richtext",
-      "default": "-",
+    "ProductInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.name-and-description",
       "required": true
     }
   }
