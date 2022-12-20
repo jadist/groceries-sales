@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_basic_info_name_and_descriptions",
+  "info": {
+    "displayName": "NameAndDescription",
+    "icon": "audio-description"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "richtext",
+      "default": "-",
+      "required": true
+    }
+  }
+}
