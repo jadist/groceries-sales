@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_invoices",
+  "info": {
+    "singularName": "sales-transaction-invoice",
+    "pluralName": "sales-transaction-invoices",
+    "displayName": "SalesTransactionInvoice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "InvoiceBasicInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.name-and-description",
+      "required": true
+    },
+    "IsCOD": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "TaxInPercentage": {
+      "type": "decimal",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "required": true
+    },
+    "TotalAmount": {
+      "type": "biginteger",
+      "default": "0",
+      "required": true,
+      "min": "0"
+    },
+    "PayingAmount": {
+      "type": "biginteger",
+      "default": "0",
+      "required": true,
+      "min": "0"
+    },
+    "InvoiceDetails": {
+      "displayName": "InvoiceDetails",
+      "type": "component",
+      "repeatable": true,
+      "component": "details.invoice-details"
+    }
+  }
+}
