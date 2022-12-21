@@ -18,18 +18,6 @@
       "component": "basic-info.name-and-description",
       "required": true
     },
-    "DiscountInPercentage": {
-      "type": "decimal",
-      "required": true,
-      "default": 0,
-      "max": 100,
-      "min": 0
-    },
-    "UseIndividualDiscount": {
-      "type": "boolean",
-      "default": false,
-      "required": true
-    },
     "QuotationDetails": {
       "type": "component",
       "repeatable": true,
@@ -40,6 +28,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
+    },
+    "TotalAmount": {
+      "type": "biginteger",
+      "min": "0",
+      "required": true,
+      "default": "0"
     }
   }
 }

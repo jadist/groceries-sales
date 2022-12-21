@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-12-21T16:03:26.558Z"
+    "x-generation-date": "2022-12-21T16:34:42.828Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -3768,21 +3768,13 @@
           "data": {
             "required": [
               "QuotationInfo",
-              "DiscountInPercentage",
-              "UseIndividualDiscount",
-              "QuotationDetails"
+              "QuotationDetails",
+              "TotalAmount"
             ],
             "type": "object",
             "properties": {
               "QuotationInfo": {
                 "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
-              },
-              "DiscountInPercentage": {
-                "type": "number",
-                "format": "float"
-              },
-              "UseIndividualDiscount": {
-                "type": "boolean"
               },
               "QuotationDetails": {
                 "type": "array",
@@ -3800,6 +3792,11 @@
                   }
                 ],
                 "example": "string or id"
+              },
+              "TotalAmount": {
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
               }
             }
           }
@@ -3816,13 +3813,6 @@
             "properties": {
               "QuotationInfo": {
                 "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
-              },
-              "DiscountInPercentage": {
-                "type": "number",
-                "format": "float"
-              },
-              "UseIndividualDiscount": {
-                "type": "boolean"
               },
               "QuotationDetails": {
                 "type": "array",
@@ -4083,6 +4073,11 @@
                     }
                   }
                 }
+              },
+              "TotalAmount": {
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
               },
               "createdAt": {
                 "type": "string",
@@ -4146,13 +4141,6 @@
               "QuotationInfo": {
                 "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               },
-              "DiscountInPercentage": {
-                "type": "number",
-                "format": "float"
-              },
-              "UseIndividualDiscount": {
-                "type": "boolean"
-              },
               "QuotationDetails": {
                 "type": "array",
                 "items": {
@@ -4412,6 +4400,11 @@
                     }
                   }
                 }
+              },
+              "TotalAmount": {
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
               },
               "createdAt": {
                 "type": "string",
@@ -4508,13 +4501,6 @@
               "QuotationInfo": {
                 "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               },
-              "DiscountInPercentage": {
-                "type": "number",
-                "format": "float"
-              },
-              "UseIndividualDiscount": {
-                "type": "boolean"
-              },
               "QuotationDetails": {
                 "type": "array",
                 "items": {
@@ -4774,6 +4760,11 @@
                     }
                   }
                 }
+              },
+              "TotalAmount": {
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
               },
               "createdAt": {
                 "type": "string",
@@ -4837,13 +4828,6 @@
               "QuotationInfo": {
                 "$ref": "#/components/schemas/BasicInfoNameAndDescriptionComponent"
               },
-              "DiscountInPercentage": {
-                "type": "number",
-                "format": "float"
-              },
-              "UseIndividualDiscount": {
-                "type": "boolean"
-              },
               "QuotationDetails": {
                 "type": "array",
                 "items": {
@@ -5103,6 +5087,11 @@
                     }
                   }
                 }
+              },
+              "TotalAmount": {
+                "type": "string",
+                "pattern": "^\\d*$",
+                "example": "123456789"
               },
               "createdAt": {
                 "type": "string",
@@ -5513,6 +5502,11 @@
           "DiscountInPercentage": {
             "type": "number",
             "format": "float"
+          },
+          "TotalAmount": {
+            "type": "string",
+            "pattern": "^\\d*$",
+            "example": "123456789"
           },
           "Notes": {
             "type": "string"
