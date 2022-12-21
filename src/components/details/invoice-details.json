@@ -9,7 +9,7 @@
     "DetailsSequenceNo": {
       "type": "integer",
       "required": true,
-      "min": 0
+      "min": 1
     },
     "ItemName": {
       "type": "string",

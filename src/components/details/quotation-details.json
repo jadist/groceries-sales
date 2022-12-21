@@ -12,6 +12,15 @@
       "relation": "oneToOne",
       "target": "api::sales-master-product.sales-master-product"
     },
+    "DetailsSequenceNo": {
+      "type": "integer",
+      "required": true,
+      "min": 1
+    },
+    "ItemName": {
+      "type": "string",
+      "required": false
+    },
     "ItemPrice": {
       "type": "biginteger",
       "min": "0",
