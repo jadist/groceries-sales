@@ -1,24 +1,24 @@
 {
   "kind": "collectionType",
-  "collectionName": "sales_transaction_purchase_orders",
+  "collectionName": "sales_transaction_sales_orders",
   "info": {
-    "singularName": "sales-transaction-purchase-order",
-    "pluralName": "sales-transaction-purchase-orders",
-    "displayName": "SalesTransactionPurchaseOrder",
-    "description": "UniqueNo from Component will be used as Purchase Order No"
+    "singularName": "sales-transaction-sales-order",
+    "pluralName": "sales-transaction-sales-orders",
+    "displayName": "SalesTransactionSalesOrder",
+    "description": "UniqueNo from Component will be used as Sales Order No"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "PurchaseOrderInfo": {
+    "SalesOrderInfo": {
       "type": "component",
       "repeatable": false,
       "component": "basic-info.name-and-description",
       "required": true
     },
-    "user_as_customer": {
+    "user_as_sales": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
