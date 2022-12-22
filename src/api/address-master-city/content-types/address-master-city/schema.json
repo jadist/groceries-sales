@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "address_master_cities",
+  "info": {
+    "singularName": "address-master-city",
+    "pluralName": "address-master-cities",
+    "displayName": "AddressMasterCity"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CityBasicInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.address-basic-info",
+      "required": true
+    },
+    "province_reference": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::address-master-province.address-master-province",
+      "inversedBy": "cities_reference"
+    },
+    "sub_districts_reference": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::address-master-sub-district.address-master-sub-district",
+      "mappedBy": "city_reference"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "address_master_sub_districts",
+  "info": {
+    "singularName": "address-master-sub-district",
+    "pluralName": "address-master-sub-districts",
+    "displayName": "AddressMasterSubDistrict"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SubDisctrictBasicInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.address-basic-info",
+      "required": true
+    },
+    "city_reference": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::address-master-city.address-master-city",
+      "inversedBy": "sub_districts_reference"
+    },
+    "street_names_reference": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::address-master-street-name.address-master-street-name",
+      "mappedBy": "sub_district_reference"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "address_master_provinces",
+  "info": {
+    "singularName": "address-master-province",
+    "pluralName": "address-master-provinces",
+    "displayName": "AddressMasterProvince"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ProvinceBasicInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.address-basic-info",
+      "required": true
+    },
+    "cities_reference": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::address-master-city.address-master-city",
+      "mappedBy": "province_reference"
+    },
+    "counties_reference": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::address-master-country.address-master-country",
+      "inversedBy": "provinces_reference"
+    }
+  }
+}

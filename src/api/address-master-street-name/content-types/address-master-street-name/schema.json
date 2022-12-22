@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "address_master_street_names",
+  "info": {
+    "singularName": "address-master-street-name",
+    "pluralName": "address-master-street-names",
+    "displayName": "AddressMasterStreetName"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "StreetNameBasicInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.address-basic-info",
+      "required": true
+    },
+    "sub_district_reference": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::address-master-sub-district.address-master-sub-district",
+      "inversedBy": "street_names_reference"
+    }
+  }
+}
