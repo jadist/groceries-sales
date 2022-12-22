@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_basic_info_user_address_basic_infos",
+  "info": {
+    "displayName": "UserAddressBasicInfo",
+    "icon": "address-card"
+  },
+  "options": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Info": {
+      "type": "richtext",
+      "default": "-",
+      "required": true
+    }
+  }
+}
