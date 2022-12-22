@@ -23,6 +23,17 @@
       "type": "component",
       "repeatable": true,
       "component": "details.delivery-order-details"
+    },
+    "user_address_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-address.user-address"
+    },
+    "UserAddressBasicInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.user-address-basic-info",
+      "required": true
     }
   }
 }
