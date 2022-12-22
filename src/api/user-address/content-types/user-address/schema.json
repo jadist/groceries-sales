@@ -4,7 +4,8 @@
   "info": {
     "singularName": "user-address",
     "pluralName": "user-addresses",
-    "displayName": "UserAddress"
+    "displayName": "UserAddress",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -27,13 +28,10 @@
       "relation": "oneToOne",
       "target": "api::address-master-street-name.address-master-street-name"
     },
-    "Name": {
-      "type": "string",
-      "required": true
-    },
-    "Description": {
-      "type": "richtext",
-      "default": "-",
+    "UserAddressBasicInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.user-address-basic-info",
       "required": true
     }
   }
