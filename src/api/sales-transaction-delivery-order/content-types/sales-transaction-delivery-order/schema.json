@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_delivery_orders",
+  "info": {
+    "singularName": "sales-transaction-delivery-order",
+    "pluralName": "sales-transaction-delivery-orders",
+    "displayName": "SalesTransactionDeliveryOrder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DeliveryOrderInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.name-and-description",
+      "required": true
+    },
+    "DeliveryOrderDetails": {
+      "displayName": "DeliveryOrderDetails",
+      "type": "component",
+      "repeatable": true,
+      "component": "details.delivery-order-details"
+    }
+  }
+}

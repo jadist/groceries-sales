@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_online_payments",
+  "info": {
+    "singularName": "sales-transaction-online-payment",
+    "pluralName": "sales-transaction-online-payments",
+    "displayName": "SalesTransactionOnlinePayment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "OnlinePaymentBasicInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.name-and-description",
+      "required": true
+    },
+    "BankName": {
+      "type": "string",
+      "required": true
+    },
+    "Amount": {
+      "type": "biginteger",
+      "required": true,
+      "min": "0"
+    }
+  }
+}
