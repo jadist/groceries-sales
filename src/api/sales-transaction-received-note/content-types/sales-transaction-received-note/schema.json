@@ -29,6 +29,12 @@
     "ReceivedByName": {
       "type": "string",
       "required": true
+    },
+    "sale_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-sale.sales-transaction-sale",
+      "mappedBy": "received_note_reference"
     }
   }
 }

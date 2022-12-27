@@ -52,6 +52,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::invoice-master-transmission-method.invoice-master-transmission-method"
+    },
+    "sale_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-sale.sales-transaction-sale",
+      "mappedBy": "invoice_reference"
     }
   }
 }

@@ -1,0 +1,81 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_sales",
+  "info": {
+    "singularName": "sales-transaction-sale",
+    "pluralName": "sales-transaction-sales",
+    "displayName": "SalesTransactionSale",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SaleBasicInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.name-and-description",
+      "required": true
+    },
+    "quotation_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-quotation.sales-transaction-quotation",
+      "inversedBy": "sale_reference"
+    },
+    "purchase_order_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-purchase-order.sales-transaction-purchase-order",
+      "inversedBy": "sale_reference"
+    },
+    "invoice_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-invoice.sales-transaction-invoice",
+      "inversedBy": "sale_reference"
+    },
+    "order_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-sales-order.sales-transaction-sales-order",
+      "inversedBy": "sale_reference"
+    },
+    "online_payment_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-online-payment.sales-transaction-online-payment",
+      "inversedBy": "sale_reference"
+    },
+    "delivery_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-delivery-order.sales-transaction-delivery-order",
+      "inversedBy": "sale_reference"
+    },
+    "cash_collection_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-cash-collection.sales-transaction-cash-collection",
+      "inversedBy": "sale_reference"
+    },
+    "received_note_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-received-note.sales-transaction-received-note",
+      "inversedBy": "sale_reference"
+    },
+    "cash_registration_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-cash-registration.sales-transaction-cash-registration",
+      "inversedBy": "sale_reference"
+    },
+    "IsSalesClosed": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  }
+}

@@ -29,6 +29,12 @@
       "min": "0",
       "required": true,
       "default": "0"
+    },
+    "sale_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-sale.sales-transaction-sale",
+      "mappedBy": "quotation_reference"
     }
   }
 }

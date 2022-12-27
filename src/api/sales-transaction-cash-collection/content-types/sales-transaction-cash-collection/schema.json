@@ -28,6 +28,12 @@
       "required": true,
       "min": "0",
       "default": "0"
+    },
+    "sale_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-sale.sales-transaction-sale",
+      "mappedBy": "cash_collection_reference"
     }
   }
 }
