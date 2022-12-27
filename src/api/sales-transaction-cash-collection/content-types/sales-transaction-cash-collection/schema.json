@@ -18,11 +18,6 @@
       "component": "basic-info.name-and-description",
       "required": true
     },
-    "user_who_give_cash": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
-    },
     "user_whom_receive_cash": {
       "type": "relation",
       "relation": "oneToOne",
