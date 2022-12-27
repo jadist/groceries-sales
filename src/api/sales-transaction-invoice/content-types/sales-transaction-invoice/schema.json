@@ -12,11 +12,19 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "InvoiceBasicInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.name-and-description",
-      "required": true
+    "InvoiceNo": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "InvoiceName": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "InvoiceDescription": {
+      "type": "richtext",
+      "required": false
     },
     "IsCOD": {
       "type": "boolean",
@@ -41,12 +49,6 @@
       "default": "0",
       "required": true,
       "min": "0"
-    },
-    "InvoiceDetails": {
-      "displayName": "InvoiceDetails",
-      "type": "component",
-      "repeatable": true,
-      "component": "details.invoice-details"
     },
     "transmission_method_reference": {
       "type": "relation",
