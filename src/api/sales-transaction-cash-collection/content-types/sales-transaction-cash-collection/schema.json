@@ -12,11 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "CashCollectionBasicInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.name-and-description",
+    "CashCollectionNo": {
+      "type": "string",
       "required": true
+    },
+    "CashCollectionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "CashCollectionNote": {
+      "type": "richtext"
     },
     "user_whom_receive_cash": {
       "type": "relation",
