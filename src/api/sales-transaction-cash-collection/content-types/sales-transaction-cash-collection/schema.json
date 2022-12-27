@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_cash_collections",
+  "info": {
+    "singularName": "sales-transaction-cash-collection",
+    "pluralName": "sales-transaction-cash-collections",
+    "displayName": "SalesTransactionCashCollection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CashCollectionBasicInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.name-and-description",
+      "required": true
+    },
+    "user_who_give_cash": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "user_whom_receive_cash": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "Amount": {
+      "type": "biginteger",
+      "required": true,
+      "min": "0",
+      "default": "0"
+    }
+  }
+}
