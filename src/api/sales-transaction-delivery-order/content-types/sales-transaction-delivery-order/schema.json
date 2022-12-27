@@ -34,6 +34,11 @@
       "repeatable": false,
       "component": "basic-info.user-address-basic-info",
       "required": true
+    },
+    "user_as_delivery_man": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }
