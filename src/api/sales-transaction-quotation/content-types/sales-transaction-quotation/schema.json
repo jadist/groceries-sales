@@ -12,16 +12,19 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "QuotationInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.name-and-description",
-      "required": true
+    "QuotationNo": {
+      "type": "string",
+      "required": true,
+      "default": "-"
     },
-    "QuotationDetails": {
-      "type": "component",
-      "repeatable": true,
-      "component": "details.quotation-details",
+    "QuotationTitle": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "QuotationNotes": {
+      "type": "richtext",
+      "default": "-",
       "required": true
     },
     "TotalAmount": {
