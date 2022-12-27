@@ -11,11 +11,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "CashRegistrationBasicInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.name-and-description",
+    "ReceivedNoteNo": {
+      "type": "string",
       "required": true
+    },
+    "ReceivedNoteTitle": {
+      "type": "string",
+      "required": true
+    },
+    "ReceivedNote": {
+      "type": "richtext"
     },
     "user_whom_register_cash": {
       "type": "relation",
