@@ -47,6 +47,11 @@
       "type": "component",
       "repeatable": true,
       "component": "details.invoice-details"
+    },
+    "transmission_method_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::invoice-master-transmission-method.invoice-master-transmission-method"
     }
   }
 }
