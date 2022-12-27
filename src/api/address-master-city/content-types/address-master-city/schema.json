@@ -11,11 +11,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "CityBasicInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.address-basic-info",
+    "CityCode": {
+      "type": "string",
+      "unique": true,
       "required": true
+    },
+    "CityName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "CityDescription": {
+      "type": "richtext"
     },
     "province_reference": {
       "type": "relation",
