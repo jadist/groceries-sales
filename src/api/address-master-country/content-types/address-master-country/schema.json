@@ -12,11 +12,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "CountryBasicInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.address-basic-info",
+    "CountryCode": {
+      "type": "string",
+      "unique": true,
       "required": true
+    },
+    "CountryName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "CountryDescription": {
+      "type": "richtext"
     },
     "provinces_reference": {
       "type": "relation",
