@@ -14,7 +14,7 @@
   "attributes": {
     "SaleNo": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "SaleTitle": {
       "type": "string",
@@ -77,7 +77,7 @@
       "target": "api::sales-transaction-cash-registration.sales-transaction-cash-registration",
       "inversedBy": "sale_reference"
     },
-    "IsSalesClosed": {
+    "IsSaleClosed": {
       "type": "boolean",
       "default": false,
       "required": true
