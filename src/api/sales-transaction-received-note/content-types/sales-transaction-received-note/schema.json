@@ -12,11 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "ReceivedNoteBasicInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.name-and-description",
+    "ReceivedNoteNo": {
+      "type": "string",
       "required": true
+    },
+    "ReceivedNoteTitle": {
+      "type": "string",
+      "required": true
+    },
+    "ReceivedNote": {
+      "type": "richtext"
     },
     "ReceivedImage": {
       "allowedTypes": [
