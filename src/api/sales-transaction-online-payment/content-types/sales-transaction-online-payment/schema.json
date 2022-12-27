@@ -26,10 +26,6 @@
       "type": "richtext",
       "required": false
     },
-    "BankName": {
-      "type": "string",
-      "required": true
-    },
     "Amount": {
       "type": "biginteger",
       "required": true,
@@ -40,6 +36,24 @@
       "relation": "oneToOne",
       "target": "api::sales-transaction-sale.sales-transaction-sale",
       "mappedBy": "online_payment_reference"
+    },
+    "payment_method_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-master-payment-method.payment-master-payment-method"
+    },
+    "PaymentMethodName": {
+      "type": "string",
+      "required": true
+    },
+    "payment_provider_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-master-payment-provider.payment-master-payment-provider"
+    },
+    "PaymentProviderName": {
+      "type": "string",
+      "required": true
     }
   }
 }
