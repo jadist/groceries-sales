@@ -1,4 +1,5 @@
 import * as constants from "../../../../text/constants/transaction-no-initial";
+import * as noFormatter from "../../../../helper/transaction-no-formatter";
 
 export default {
   async beforeCreate(event) {
@@ -17,14 +18,30 @@ export default {
           where: { createdAt: { $gte: thisMonth } },
         });
 
-      const YY = `00${now.getFullYear()}`.slice(-2);
-      const XXXXXXXX = `000000${count}`.slice(-6);
-      const quotationNo = `${constants.TransactionNoInitialEnum.Quotation}/${YY}${MM}/${XXXXXXXX}`;
+      const uniqueNo = noFormatter.default.StandardFormat(
+        constants.TransactionNoInitialEnum.Quotation,
+        now.getFullYear(),
+        now.getMonth() + 1,
+        count
+      );
 
-      data.QuotationNo = quotationNo;
+      /**
+       * Here, we cannot get the thrown error of Duplicate Entries
+       * Therefore, try to query again if the record is exist,
+       * Before trying assign new value
+       */
+      const [duplicateEntries, duplicateCount] = await strapi.db
+        .query("api::sales-transaction-quotation.sales-transaction-quotation")
+        .findWithCount({
+          select: ["QuotationNo", "createdAt"],
+          where: { QuotationNo: { $eq: uniqueNo } },
+        });
 
-      console.log("entries", entries);
-      console.log("count", count);
+      if (duplicateCount === 0) {
+        data.QuotationNo = uniqueNo;
+      } else {
+        data.QuotationNo = `${uniqueNo}/${Date.now()}`;
+      }
     }
   },
 };
