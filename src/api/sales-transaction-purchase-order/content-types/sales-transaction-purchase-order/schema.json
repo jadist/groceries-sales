@@ -12,11 +12,19 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "PurchaseOrderInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.name-and-description",
-      "required": true
+    "PurchaseOrderNo": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "PurchaseOrderName": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "PurchaseOrderDescription": {
+      "type": "richtext",
+      "required": false
     },
     "user_as_customer": {
       "type": "relation",
