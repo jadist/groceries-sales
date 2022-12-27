@@ -20,9 +20,9 @@
     },
     "quotation_reference": {
       "type": "relation",
-      "relation": "oneToOne",
+      "relation": "manyToOne",
       "target": "api::sales-transaction-quotation.sales-transaction-quotation",
-      "inversedBy": "sale_reference"
+      "inversedBy": "sale_references"
     },
     "purchase_order_reference": {
       "type": "relation",
