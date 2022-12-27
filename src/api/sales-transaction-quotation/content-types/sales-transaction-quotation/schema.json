@@ -14,7 +14,8 @@
   "attributes": {
     "QuotationNo": {
       "type": "string",
-      "required": false
+      "required": false,
+      "unique": true
     },
     "QuotationTitle": {
       "type": "string",

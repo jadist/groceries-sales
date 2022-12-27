@@ -14,7 +14,8 @@
   "attributes": {
     "SalesOrderNo": {
       "type": "string",
-      "required": false
+      "required": false,
+      "unique": true
     },
     "SalesOrderName": {
       "type": "string",

@@ -13,7 +13,8 @@
   "attributes": {
     "ReceivedNoteNo": {
       "type": "string",
-      "required": false
+      "required": false,
+      "unique": true
     },
     "ReceivedNoteTitle": {
       "type": "string",
