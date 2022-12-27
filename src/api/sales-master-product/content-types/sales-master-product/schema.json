@@ -12,10 +12,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "ProductInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.name-and-description",
+    "ProductSKU": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ProductName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ProductDescription": {
+      "type": "richtext",
       "required": true
     }
   }
