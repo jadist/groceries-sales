@@ -23,16 +23,18 @@
       "relation": "oneToOne",
       "target": "api::address-master-type.address-master-type"
     },
-    "UserAddressBasicInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.user-address-basic-info",
-      "required": true
-    },
     "sub_district_reference": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::address-master-sub-district.address-master-sub-district"
+    },
+    "AddressTitle": {
+      "type": "string",
+      "required": true
+    },
+    "AddressDetail": {
+      "type": "richtext",
+      "required": true
     }
   }
 }
