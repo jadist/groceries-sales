@@ -60,6 +60,12 @@
       "relation": "oneToOne",
       "target": "api::sales-transaction-sale.sales-transaction-sale",
       "mappedBy": "invoice_reference"
+    },
+    "invoice_detail_references": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sales-transaction-invoice-detail.sales-transaction-invoice-detail",
+      "mappedBy": "invoice_reference"
     }
   }
 }
