@@ -12,11 +12,19 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "DeliveryOrderInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.name-and-description",
-      "required": true
+    "DeliveryOrderNo": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "DeliveryOrderName": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "DeliveryOrderDescription": {
+      "type": "richtext",
+      "required": false
     },
     "DeliveryOrderDetails": {
       "displayName": "DeliveryOrderDetails",
