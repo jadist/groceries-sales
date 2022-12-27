@@ -12,11 +12,19 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "OnlinePaymentBasicInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.name-and-description",
-      "required": true
+    "PaymentReferenceNo": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "PayementTitle": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "PayementNote": {
+      "type": "richtext",
+      "required": false
     },
     "BankName": {
       "type": "string",
