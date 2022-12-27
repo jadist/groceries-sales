@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_master_payment_providers",
+  "info": {
+    "singularName": "payment-master-payment-provider",
+    "pluralName": "payment-master-payment-providers",
+    "displayName": "PaymentMasterPaymentProvider"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PaymentProviderCode": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "CompanyCode": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "CompanyName": {
+      "type": "string",
+      "required": true
+    },
+    "CompanyDescription": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
