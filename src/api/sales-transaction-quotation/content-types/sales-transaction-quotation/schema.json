@@ -35,6 +35,12 @@
       "relation": "oneToMany",
       "target": "api::sales-transaction-sale.sales-transaction-sale",
       "mappedBy": "quotation_reference"
+    },
+    "quotation_detail_references": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sales-transaction-quotation-detail.sales-transaction-quotation-detail",
+      "mappedBy": "quotation_reference"
     }
   }
 }
