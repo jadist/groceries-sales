@@ -12,11 +12,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "SaleBasicInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.name-and-description",
+    "SaleNo": {
+      "type": "string",
       "required": true
+    },
+    "SaleTitle": {
+      "type": "string",
+      "required": true
+    },
+    "SaleNote": {
+      "type": "richtext"
     },
     "quotation_reference": {
       "type": "relation",
