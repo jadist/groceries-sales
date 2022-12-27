@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_cash_registrations",
+  "info": {
+    "singularName": "sales-transaction-cash-registration",
+    "pluralName": "sales-transaction-cash-registrations",
+    "displayName": "SalesTransactionCashRegistration"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CashRegistrationBasicInfo": {
+      "type": "component",
+      "repeatable": false,
+      "component": "basic-info.name-and-description",
+      "required": true
+    },
+    "user_whom_register_cash": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "CashAmount": {
+      "type": "biginteger",
+      "required": true,
+      "min": "0",
+      "default": "0"
+    }
+  }
+}
