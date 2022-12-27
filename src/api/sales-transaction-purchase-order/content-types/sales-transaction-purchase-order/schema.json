@@ -14,8 +14,7 @@
   "attributes": {
     "PurchaseOrderNo": {
       "type": "string",
-      "required": true,
-      "default": "-"
+      "required": false
     },
     "PurchaseOrderName": {
       "type": "string",

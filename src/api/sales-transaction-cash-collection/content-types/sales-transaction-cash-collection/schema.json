@@ -14,7 +14,7 @@
   "attributes": {
     "CashCollectionNo": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "CashCollectionTitle": {
       "type": "string",

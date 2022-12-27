@@ -14,8 +14,7 @@
   "attributes": {
     "InvoiceNo": {
       "type": "string",
-      "required": true,
-      "default": "-"
+      "required": false
     },
     "InvoiceName": {
       "type": "string",

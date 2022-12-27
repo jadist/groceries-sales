@@ -14,8 +14,7 @@
   "attributes": {
     "PaymentReferenceNo": {
       "type": "string",
-      "required": true,
-      "default": "-"
+      "required": false
     },
     "PayementTitle": {
       "type": "string",

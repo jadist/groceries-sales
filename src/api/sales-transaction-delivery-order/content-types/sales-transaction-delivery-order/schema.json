@@ -14,8 +14,7 @@
   "attributes": {
     "DeliveryOrderNo": {
       "type": "string",
-      "required": true,
-      "default": "-"
+      "required": false
     },
     "DeliveryOrderName": {
       "type": "string",

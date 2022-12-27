@@ -14,7 +14,7 @@
   "attributes": {
     "ReceivedNoteNo": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "ReceivedNoteTitle": {
       "type": "string",
@@ -24,12 +24,12 @@
       "type": "richtext"
     },
     "ReceivedImage": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": true,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "ReceivedByName": {
       "type": "string",
