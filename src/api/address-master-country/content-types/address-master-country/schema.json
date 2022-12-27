@@ -22,7 +22,7 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::address-master-province.address-master-province",
-      "mappedBy": "counties_reference"
+      "mappedBy": "countries_reference"
     }
   }
 }

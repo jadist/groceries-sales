@@ -23,10 +23,10 @@
       "target": "api::address-master-province.address-master-province",
       "inversedBy": "cities_reference"
     },
-    "sub_districts_reference": {
+    "districts_reference": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::address-master-sub-district.address-master-sub-district",
+      "target": "api::address-master-district.address-master-district",
       "mappedBy": "city_reference"
     }
   }

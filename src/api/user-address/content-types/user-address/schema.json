@@ -23,16 +23,16 @@
       "relation": "oneToOne",
       "target": "api::address-master-type.address-master-type"
     },
-    "street_name_reference": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::address-master-street-name.address-master-street-name"
-    },
     "UserAddressBasicInfo": {
       "type": "component",
       "repeatable": false,
       "component": "basic-info.user-address-basic-info",
       "required": true
+    },
+    "sub_district_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::address-master-sub-district.address-master-sub-district"
     }
   }
 }

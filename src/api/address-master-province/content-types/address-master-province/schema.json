@@ -4,7 +4,8 @@
   "info": {
     "singularName": "address-master-province",
     "pluralName": "address-master-provinces",
-    "displayName": "AddressMasterProvince"
+    "displayName": "AddressMasterProvince",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -23,7 +24,7 @@
       "target": "api::address-master-city.address-master-city",
       "mappedBy": "province_reference"
     },
-    "counties_reference": {
+    "countries_reference": {
       "type": "relation",
       "relation": "manyToOne",
       "target": "api::address-master-country.address-master-country",
