@@ -12,11 +12,19 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "SalesOrderInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.name-and-description",
-      "required": true
+    "SalesOrderNo": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "SalesOrderName": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "SalesOrderDescription": {
+      "type": "richtext",
+      "required": false
     },
     "user_as_sales": {
       "type": "relation",
