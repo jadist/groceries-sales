@@ -12,11 +12,18 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "ProvinceBasicInfo": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.address-basic-info",
+    "ProvinceCode": {
+      "type": "string",
+      "unique": true,
       "required": true
+    },
+    "ProvinceName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ProvinceDescription": {
+      "type": "richtext"
     },
     "cities_reference": {
       "type": "relation",
