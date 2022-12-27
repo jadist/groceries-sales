@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_delivery_order_details",
+  "info": {
+    "singularName": "sales-transaction-delivery-order-detail",
+    "pluralName": "sales-transaction-delivery-order-details",
+    "displayName": "SalesTransactionDeliveryOrderDetail"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "delivery_order_reference": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sales-transaction-delivery-order.sales-transaction-delivery-order",
+      "inversedBy": "delivery_order_detail_references"
+    },
+    "ItemName": {
+      "type": "string",
+      "required": true
+    },
+    "ItemDescription": {
+      "type": "richtext",
+      "required": true
+    },
+    "ItemQuantity": {
+      "type": "integer",
+      "min": 1,
+      "required": true
+    },
+    "quotation_detail_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-quotation-detail.sales-transaction-quotation-detail"
+    },
+    "product_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-master-product.sales-master-product"
+    }
+  }
+}

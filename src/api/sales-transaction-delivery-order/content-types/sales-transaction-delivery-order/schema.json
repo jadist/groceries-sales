@@ -26,33 +26,33 @@
       "type": "richtext",
       "required": false
     },
-    "DeliveryOrderDetails": {
-      "displayName": "DeliveryOrderDetails",
-      "type": "component",
-      "repeatable": true,
-      "component": "details.delivery-order-details"
-    },
-    "user_address_reference": {
+    "delivery_order_detail_references": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::user-address.user-address"
-    },
-    "UserAddressDeliveryDestination": {
-      "type": "component",
-      "repeatable": false,
-      "component": "basic-info.user-address-basic-info",
-      "required": true
-    },
-    "user_as_delivery_man": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
+      "relation": "oneToMany",
+      "target": "api::sales-transaction-delivery-order-detail.sales-transaction-delivery-order-detail",
+      "mappedBy": "delivery_order_reference"
     },
     "sale_reference": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::sales-transaction-sale.sales-transaction-sale",
       "mappedBy": "delivery_reference"
+    },
+    "user_address_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-address.user-address"
+    },
+    "DeliveryDestinationUserName": {
+      "type": "string"
+    },
+    "DeliveryDestinationInfo": {
+      "type": "richtext"
+    },
+    "user_as_delivery_man": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
     }
   }
 }
