@@ -23,7 +23,7 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
     },
-    "Amount": {
+    "CashAmount": {
       "type": "biginteger",
       "required": true,
       "min": "0",
