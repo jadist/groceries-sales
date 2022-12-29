@@ -5,8 +5,6 @@ export default {
   async beforeCreate(event) {
     const { data, where, select, populate } = event.params;
 
-    console.log(data);
-
     if (!data.PurchaseOrderNo) {
       const now = new Date();
       const year = `${now.getFullYear()}`;
