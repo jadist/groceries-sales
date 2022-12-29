@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_invoice_details",
+  "info": {
+    "singularName": "sales-transaction-invoice-detail",
+    "pluralName": "sales-transaction-invoice-details",
+    "displayName": "SalesTransactionInvoiceDetail"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "invoice_reference": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::sales-transaction-invoice.sales-transaction-invoice",
+      "inversedBy": "invoice_detail_references"
+    },
+    "InvoiceItemName": {
+      "type": "string",
+      "required": true
+    },
+    "InvoiceItemDescription": {
+      "type": "richtext",
+      "default": "-",
+      "required": false
+    },
+    "ItemQuantity": {
+      "type": "integer",
+      "required": true,
+      "min": 1,
+      "default": 0
+    },
+    "TotalAmount": {
+      "type": "biginteger",
+      "required": true,
+      "min": "0",
+      "default": "0"
+    },
+    "quotation_detail_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-quotation-detail.sales-transaction-quotation-detail"
+    }
+  }
+}

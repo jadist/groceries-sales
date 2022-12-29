@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_master_payment_methods",
+  "info": {
+    "singularName": "payment-master-payment-method",
+    "pluralName": "payment-master-payment-methods",
+    "displayName": "PaymentMasterPaymentMethod"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PaymentMethodCode": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "PaymentMethodName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "PaymentMethodDescription": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

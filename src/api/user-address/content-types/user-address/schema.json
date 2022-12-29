@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "user_addresses",
+  "info": {
+    "singularName": "user-address",
+    "pluralName": "user-addresses",
+    "displayName": "UserAddress",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user_reference": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "user_addresses_reference"
+    },
+    "type_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::address-master-type.address-master-type"
+    },
+    "sub_district_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::address-master-sub-district.address-master-sub-district"
+    },
+    "AddressTitle": {
+      "type": "string",
+      "required": true
+    },
+    "AddressDetail": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}

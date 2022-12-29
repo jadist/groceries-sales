@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_received_notes",
+  "info": {
+    "singularName": "sales-transaction-received-note",
+    "pluralName": "sales-transaction-received-notes",
+    "displayName": "SalesTransactionReceivedNote",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ReceivedNoteNo": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "ReceivedNoteTitle": {
+      "type": "string",
+      "required": true
+    },
+    "ReceivedNote": {
+      "type": "richtext"
+    },
+    "ReceivedImage": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "ReceivedByName": {
+      "type": "string",
+      "required": true
+    },
+    "sale_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-sale.sales-transaction-sale",
+      "mappedBy": "received_note_reference"
+    }
+  }
+}

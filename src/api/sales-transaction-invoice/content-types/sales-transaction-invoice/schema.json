@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_invoices",
+  "info": {
+    "singularName": "sales-transaction-invoice",
+    "pluralName": "sales-transaction-invoices",
+    "displayName": "SalesTransactionInvoice",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "InvoiceNo": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "InvoiceName": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "InvoiceDescription": {
+      "type": "richtext",
+      "required": false
+    },
+    "IsCOD": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "TaxInPercentage": {
+      "type": "decimal",
+      "default": 0,
+      "min": 0,
+      "max": 100,
+      "required": true
+    },
+    "TotalAmount": {
+      "type": "biginteger",
+      "default": "0",
+      "required": true,
+      "min": "0"
+    },
+    "PayingAmount": {
+      "type": "biginteger",
+      "default": "0",
+      "required": true,
+      "min": "0"
+    },
+    "transmission_method_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::invoice-master-transmission-method.invoice-master-transmission-method"
+    },
+    "sale_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-sale.sales-transaction-sale",
+      "mappedBy": "invoice_reference"
+    },
+    "invoice_detail_references": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sales-transaction-invoice-detail.sales-transaction-invoice-detail",
+      "mappedBy": "invoice_reference"
+    }
+  }
+}

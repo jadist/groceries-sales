@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_delivery_orders",
+  "info": {
+    "singularName": "sales-transaction-delivery-order",
+    "pluralName": "sales-transaction-delivery-orders",
+    "displayName": "SalesTransactionDeliveryOrder",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DeliveryOrderNo": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "DeliveryOrderName": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "DeliveryOrderDescription": {
+      "type": "richtext",
+      "required": false
+    },
+    "delivery_order_detail_references": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sales-transaction-delivery-order-detail.sales-transaction-delivery-order-detail",
+      "mappedBy": "delivery_order_reference"
+    },
+    "sale_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-sale.sales-transaction-sale",
+      "mappedBy": "delivery_reference"
+    },
+    "user_address_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::user-address.user-address"
+    },
+    "DeliveryDestinationUserName": {
+      "type": "string"
+    },
+    "DeliveryDestinationInfo": {
+      "type": "richtext"
+    },
+    "user_as_delivery_man": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    }
+  }
+}

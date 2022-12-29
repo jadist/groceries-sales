@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_quotations",
+  "info": {
+    "singularName": "sales-transaction-quotation",
+    "pluralName": "sales-transaction-quotations",
+    "displayName": "SalesTransactionQuotation",
+    "description": "UniqueNo from Component will be used as QuotationNo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "QuotationNo": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "QuotationTitle": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "QuotationNotes": {
+      "type": "richtext",
+      "default": "-",
+      "required": true
+    },
+    "TotalAmount": {
+      "type": "biginteger",
+      "min": "0",
+      "required": true,
+      "default": "0"
+    },
+    "sale_references": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sales-transaction-sale.sales-transaction-sale",
+      "mappedBy": "quotation_reference"
+    },
+    "quotation_detail_references": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::sales-transaction-quotation-detail.sales-transaction-quotation-detail",
+      "mappedBy": "quotation_reference"
+    }
+  }
+}

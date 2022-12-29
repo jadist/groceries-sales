@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "address_master_districts",
+  "info": {
+    "singularName": "address-master-district",
+    "pluralName": "address-master-districts",
+    "displayName": "AddressMasterDistrict",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DistrictCode": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "DistrictName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "DistrictDescription": {
+      "type": "richtext"
+    },
+    "city_reference": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::address-master-city.address-master-city",
+      "inversedBy": "districts_reference"
+    },
+    "sub_districts_references": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::address-master-sub-district.address-master-sub-district",
+      "mappedBy": "district_reference"
+    }
+  }
+}

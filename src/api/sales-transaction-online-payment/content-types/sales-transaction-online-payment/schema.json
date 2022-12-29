@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_online_payments",
+  "info": {
+    "singularName": "sales-transaction-online-payment",
+    "pluralName": "sales-transaction-online-payments",
+    "displayName": "SalesTransactionOnlinePayment",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "PaymentReferenceNo": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "PayementTitle": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "PayementNote": {
+      "type": "richtext",
+      "required": false
+    },
+    "Amount": {
+      "type": "biginteger",
+      "required": true,
+      "min": "0"
+    },
+    "sale_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-sale.sales-transaction-sale",
+      "mappedBy": "online_payment_reference"
+    },
+    "payment_method_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-master-payment-method.payment-master-payment-method"
+    },
+    "PaymentMethodName": {
+      "type": "string",
+      "required": true
+    },
+    "payment_provider_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::payment-master-payment-provider.payment-master-payment-provider"
+    },
+    "PaymentProviderName": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

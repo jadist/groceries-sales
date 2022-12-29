@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_sales_orders",
+  "info": {
+    "singularName": "sales-transaction-sales-order",
+    "pluralName": "sales-transaction-sales-orders",
+    "displayName": "SalesTransactionSalesOrder",
+    "description": "UniqueNo from Component will be used as Sales Order No"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "SalesOrderNo": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "SalesOrderName": {
+      "type": "string",
+      "required": true,
+      "default": "-"
+    },
+    "SalesOrderDescription": {
+      "type": "richtext",
+      "required": false
+    },
+    "user_as_sales": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "sale_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-sale.sales-transaction-sale",
+      "mappedBy": "order_reference"
+    }
+  }
+}

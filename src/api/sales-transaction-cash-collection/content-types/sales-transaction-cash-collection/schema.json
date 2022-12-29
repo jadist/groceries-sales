@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_transaction_cash_collections",
+  "info": {
+    "singularName": "sales-transaction-cash-collection",
+    "pluralName": "sales-transaction-cash-collections",
+    "displayName": "SalesTransactionCashCollection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CashCollectionNo": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "CashCollectionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "CashCollectionNote": {
+      "type": "richtext"
+    },
+    "user_whom_receive_cash": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "CashAmount": {
+      "type": "biginteger",
+      "required": true,
+      "min": "0",
+      "default": "0"
+    },
+    "sale_reference": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::sales-transaction-sale.sales-transaction-sale",
+      "mappedBy": "cash_collection_reference"
+    }
+  }
+}

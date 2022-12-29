@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "address_master_countries",
+  "info": {
+    "singularName": "address-master-country",
+    "pluralName": "address-master-countries",
+    "displayName": "AddressMasterCountry",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "CountryCode": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "CountryName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "CountryDescription": {
+      "type": "richtext"
+    },
+    "provinces_reference": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::address-master-province.address-master-province",
+      "mappedBy": "countries_reference"
+    }
+  }
+}

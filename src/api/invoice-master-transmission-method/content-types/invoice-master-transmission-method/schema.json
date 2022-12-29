@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "invoice_master_transmission_methods",
+  "info": {
+    "singularName": "invoice-master-transmission-method",
+    "pluralName": "invoice-master-transmission-methods",
+    "displayName": "InvoiceMasterTransmissionMethod",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TransmissionMethodName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "TransmissionMethodDescription": {
+      "type": "richtext",
+      "required": true
+    },
+    "TransmissionMethodCode": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

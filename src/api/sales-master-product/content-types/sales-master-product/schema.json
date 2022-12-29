@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales_master_products",
+  "info": {
+    "singularName": "sales-master-product",
+    "pluralName": "sales-master-products",
+    "displayName": "SalesMasterProduct",
+    "description": "UniqueNo from the Component, will be used as SKU"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ProductSKU": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ProductName": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "ProductDescription": {
+      "type": "richtext",
+      "required": true
+    }
+  }
+}
