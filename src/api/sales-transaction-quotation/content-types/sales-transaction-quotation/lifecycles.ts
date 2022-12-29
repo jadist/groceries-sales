@@ -20,8 +20,6 @@ export default {
 
       const uniqueNo = noFormatter.default.StandardFormat(
         constants.TransactionNoInitialEnum.Quotation,
-        now.getFullYear(),
-        now.getMonth() + 1,
         count
       );
 
