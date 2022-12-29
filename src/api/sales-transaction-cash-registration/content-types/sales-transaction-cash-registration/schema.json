@@ -11,16 +11,16 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "ReceivedNoteNo": {
+    "CashRegistrationNo": {
       "type": "string",
       "required": false,
       "unique": true
     },
-    "ReceivedNoteTitle": {
+    "CashRegistrationTitle": {
       "type": "string",
       "required": true
     },
-    "ReceivedNote": {
+    "CashRegistrationNote": {
       "type": "richtext"
     },
     "user_whom_register_cash": {
